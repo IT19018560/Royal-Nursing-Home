@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>contact us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body{
+            font-family: sans-serif;
+            font-size: 12px;
+            margin: 3px auto;
+            padding:8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+#nav {
+            list-style: none inside;
+            margin: 3px auto;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #nav li {
+            display: block;
+            position: relative;
+            float: left;
+            background: black;
+            /* menu background color */
+        }
+
+        #nav li a {
+            display: block;
+            padding: 0;
+            text-decoration: none;
+            width: 178px;
+            /* this is the width of the menu items */
+            line-height: 35px;
+            /* this is the hieght of the menu items */
+            color: #ffffff;
+            /* list item font color */
+        }
+
+        #nav li li a {
+            font-size: 80%;
+        }
+
+        /* smaller font size for sub menu items */
+
+        #nav li:hover {
+            background: gray;
+        }
+
+        /* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+        #nav ul {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            display: none;
+            /* hides sublists */
+        }
+
+        #nav li:hover ul ul {
+            display: none;
+        }
+
+        /* hides sub-sublists */
+
+        #nav li:hover ul {
+            display: block;
+        }
+
+        /* shows sublist on hover */
+
+        #nav li li:hover ul {
+            display: block;
+            /* shows sub-sublist on hover */
+            margin-left: 200px;
+            /* this should be the same width as the parent list item */
+            margin-top: -35px;
+            /* aligns top of sub menu with top of list item */
+        }
+
+
+
+
+
+h1{
+  margin: 60px;
+  border: 1px solid black;
+  background-image:url( "contact.jpg");
+  padding: 60px;
+  font-size: 28px;
+  color: blue;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 40px;
+  height: 1040px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #9932cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+address{
+
+ font-size:14px;
+ font-weight:2px;
+}
+
+p{
+
+ font-size:14.7px;
+ 
+}
+
+email{
+
+ font-size:14px;
+ font-weight:2px;
+}
+
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<img src="pic4.png" alt="Trulli"> 
+<br><br>
+<ul id="nav">
+        <li><a href="Home.html">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">COVID-19</a></li>
+        <li><a href="home-nursing-services.html">Home Nursing Services </a>
+            <ul>
+                <li><a href="#">Industrial Nursing Services</a></li>
+                <li><a href="#">Baby Care Nursing</a></li>
+                <li><a href="#">Jobs »</a>
+                    <ul>
+                        <li><a href="#">JobsSinhala</a>
+                            <li><a href="#">jobsTamil</a>
+                    </ul>
+                    </li>
+            </ul>
+            </li>
+            <li><a href="#">Elders Home</a></li>
+			<li><a href="ambulance.html">Ambulance</a></li>
+			<li><a href="medicalequipment.html">Medical Equipment</a></li>
+	       <li><a href="contactus.html">Contact Us </a>
+            <ul>
+                <li><a href="membership.html">Membership</a></li><ul>
+    </ul>   </ul>   </ul>   
+
+
+
+
+
+<h1><center> Contact Us </center></h1>
+
+
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>GET IN TOUCH WITH US</h2>
+   <div class="container">
+  <form action="/action_page.php">
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">FIRST NAME</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">LAST NAME</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+       <label for="PhoneNumber">PHONE NUMBER</label>
+       </div>
+        <div class="col-75">
+        <input type="number" name="Phone Number" placeholder="Your Phone Number..">
+      </div>
+     </div>
+
+
+ <div class="row">
+      <div class="col-25">
+       <label for="email">EMAIL</label>
+       </div>
+        <div class="col-75">
+        <input type="email" name="email" placeholder="Your email address..">
+      </div>
+     </div>
+
+
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">YOUR MESSAGE</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+  </div>
+
+  <div class="column" style="background-color:#bbb;">
+    <h2>CONTACT INFORMATION</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.237951666511!2d79.92770261472019!3d6.862060995041104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250861a59c587%3A0x13a9b0070a581b68!2sRoyal%20Nursing%20Care%20Center!5e0!3m2!1sen!2slk!4v1647109213776!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+<p>24 Hours Helpline 0711 600 600,   011 2 80 40 40​​</p>
+​
+<h2>Royal Nursing Home (Pvt)Ltd.</h2>
+<address> # 35 Devananda Road, Nawinna Maharagama</address> 
+
+<h2>Head Office</h2>
+<address> # 44 Devananda Road,
+Nawinna Maharagama</address>
+<p>Telephone - 0112804040</p>
+
+<h2>City Office</h2>
+<address> # 32 Ward Place, Colombo 07 </address>
+<p>Telephone - 0711 600 600</p>
+
+<h2>Emergency Management</h2>
+<address># 491 Highlevel Road
+Wijerama, Nugegoda</address>
+<p>Telephone - 0114960194</p>
+
+<h2>E-mail</h2>  
+<email>mail@royalnursinghome.com</email>
+  </div>
+</div>
+
+
+<br><br><br><br><br>
+
+
+
+
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>ROYAL NURSING HOME <span>(PVT)LTD.</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">COVID-19</a>
+					·
+					<a href="#">Home Nursing Services</a>
+					·
+					<a href="#">Elders Home</a>
+					·
+					<a href="#">Ambulance</a>
+					·
+					<a href="#">Medical Equipment</a>
+					·
+					
+					<a href="#">Contact Us</a>
+				</p>
+
+				<p class="footer-company-name"># 35 Devananda Road, Nawinna Maharagama</P>
+<p class="footer-company-name"> Care is just a phone call away   011 2 80 40 40</P>
+<p class="footer-company-name"> Copyright @ 2007 Royal Nursing Home(Pvt)Ltd. mail@royalnursinghome.com</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p>Contact Us</p>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email">
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+			</div>
+			<div class="footer-right">
+<a href="#"><img src="pic3.png" alt="Trulli"></a> 	</div>
+
+		</footer>
+	
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

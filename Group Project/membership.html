@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Membership</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body{
+            font-family: sans-serif;
+            font-size: 12px;
+            margin: 3px auto;
+            padding:8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+#nav {
+            list-style: none inside;
+            margin: 3px auto;
+            padding: 8px;
+            text-align: center;
+        }
+
+        #nav li {
+            display: block;
+            position: relative;
+            float: left;
+            background: black;
+            /* menu background color */
+        }
+
+        #nav li a {
+            display: block;
+            padding: 0;
+            text-decoration: none;
+            width: 178px;
+            /* this is the width of the menu items */
+            line-height: 35px;
+            /* this is the hieght of the menu items */
+            color: #ffffff;
+            /* list item font color */
+        }
+
+        #nav li li a {
+            font-size: 80%;
+        }
+
+        /* smaller font size for sub menu items */
+
+        #nav li:hover {
+            background:gray;
+        }
+
+        /* highlights current hovered list item and the parent list items when hovering over sub menues */
+
+        #nav ul {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            display: none;
+            /* hides sublists */
+        }
+
+        #nav li:hover ul ul {
+            display: none;
+        }
+
+        /* hides sub-sublists */
+
+        #nav li:hover ul {
+            display: block;
+        }
+
+        /* shows sublist on hover */
+
+        #nav li li:hover ul {
+            display: block;
+            /* shows sub-sublist on hover */
+            margin-left: 200px;
+            /* this should be the same width as the parent list item */
+            margin-top: -35px;
+            /* aligns top of sub menu with top of list item */
+        }
+
+
+
+ h1{
+  margin: 60px;
+  border: 1px solid black;
+  padding: 60px;
+  font-size: 28px;
+  background-color: #c4c3d0;
+  color: white;
+}
+
+
+div {
+  border: 0px solid gray;
+  padding: 8px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+
+
+.button {
+  background-color: #ba55d3;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 620px;
+  cursor: pointer;
+}
+
+
+.button4 {border-radius: 12px;}
+
+
+
+
+.footer-distributed{
+	background: #444;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 50px 60px 40px;
+	overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	float: right;
+}
+
+.footer-distributed .footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  #1f2022;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #d1d2d2;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: #ffffff;
+	border: 0;
+	padding: 15px 50px;
+	font-weight: bold;
+	float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<img src="pic4.png" alt="Trulli"> 
+<br><br>
+<ul id="nav">
+        <li><a href="Home.html">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">COVID-19</a></li>
+        <li><a href="home-nursing-services.html">Home Nursing Services </a>
+            <ul>
+                <li><a href="#">Industrial Nursing Services</a></li>
+                <li><a href="#">Baby Care Nursing</a></li>
+                <li><a href="#">Jobs »</a>
+                    <ul>
+                        <li><a href="#">JobsSinhala</a>
+                            <li><a href="#">jobsTamil</a>
+                    </ul>
+                    </li>
+            </ul>
+            </li>
+            <li><a href="#">Elders Home</a></li>
+			<li><a href="ambulance.html">Ambulance</a></li>
+			<li><a href="medicalequipment.html">Medical Equipment</a></li>
+	       <li><a href="contactus.html">Contact Us </a>
+            <ul>
+                <li><a href="membership.html">Membership</a></li><ul>
+    </ul>   </ul>   </ul>   
+
+
+
+<h1><center> Membership Benefits & Discounts  
+Joining the Sri lanka’s largest Home Care Institute has considerable benefits & Discounts </center></h1>
+
+
+
+
+<div>
+  
+  <p> The loyalty program offered by Royal Nursing Home (Pvt)Ltd. allows members to obtain a 10% discount at leading private hospitals and many other privileges including priority in many</p>  <p> services.</p>
+
+
+
+<table border="0" align="center">
+<tr>
+<td><img src="lankahospital.jpg" width="200px"  height="100px">
+<td><img src="hemas.jpg" width="100px"  height="100px">
+<td><img src="kingshospital.jpg" width="100px"  height="100px">
+<td><img src="durdans.jpg" width="200px"  height="100px">
+</tr>
+<table>
+
+
+
+
+<p> Members will only be charged with Rs. 5,000/= as the starting fee for our ambulance service. Only Rs.200 will be charged for each additional kilometre. The normal starting fee for the</p>   <p> ambulance service is Rs. 7,000/=</p>
+
+<p> Members will also receive a 5% discount when purchasing medical equipment.
+
+Our members can also receive adult diapers, certified with ISO and SLS, delivered to their own homes,</p>  <p> free of charge.</p>
+
+<p> You also receive a 5% discount when shopping at Cargills or Keells supermarkets.
+
+
+When using online services such as health net or medi pack, to get your medicine delivered to your home,</p> <p> you get a 5% discount on your purchases</p>
+
+
+<table border="0" align="center">
+<tr>
+<td><img src="mymed.jpg" width="200px"  height="100px">
+</tr>
+</table>
+
+
+<h2> Family members and close friends of members of those in the loyalty program are also entitled to the benefits.</h2>
+
+
+<p> Get a Home Care Membership to look after the health of your loving parents and patients
+  
+We are ready to serve and perform the necessary duties for your loved ones and family members in</p> <p> times of emergency, even when you are unable to be there.</p>
+
+<br><br>
+
+
+<a href="membership.pdf"> <h2> Application for Membership </h2></a>
+
+
+<a href="membership.pdf"><button class="button button4">Application Download </button> </a>
+
+
+</div>
+
+
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<h3>ROYAL NURSING HOME <span>(PVT)LTD.</span></h3>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">COVID-19</a>
+					·
+					<a href="#">Home Nursing Services</a>
+					·
+					<a href="#">Elders Home</a>
+					·
+					<a href="#">Ambulance</a>
+					·
+					<a href="#">Medical Equipment</a>
+					·
+					
+					<a href="#">Contact Us</a>
+				</p>
+
+				<p class="footer-company-name"># 35 Devananda Road, Nawinna Maharagama</P>
+<p class="footer-company-name"> Care is just a phone call away   011 2 80 40 40</P>
+<p class="footer-company-name"> Copyright @ 2007 Royal Nursing Home(Pvt)Ltd. mail@royalnursinghome.com</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p>Contact Us</p>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email">
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+			</div>
+			<div class="footer-right">
+<a href="#"><img src="pic3.png" alt="Trulli"></a> 	</div>
+
+		</footer>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
